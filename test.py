@@ -278,8 +278,25 @@ def bt10():
     s = sum(B)
     a = sum(a)
     print(s-a, file=fo)
-bt10()    
-        
+#bt10()    
+def bt_them():
+    fi = open('input.inp', 'r')
+    fo = open('output.out', 'w')
+    n = int(fi.readline())
+    s = list(map(int, fi.readline().split()))
+    s.sort()
+    abc=[]
+    k = int(fi.readline())
+    for i in range(len(s)):
+        abc = abc.append(s[i])
+        if sum(abc) >= k:
+            break
+    print(abc, file=fo)
+    fi.close()
+    fo.close()
+bt_them()
+    
+    
         
         
 
