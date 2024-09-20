@@ -284,17 +284,21 @@ def bt_them():
     fo = open('output.out', 'w')
     n = int(fi.readline())
     s = list(map(int, fi.readline().split()))
+    k = int(fi.readline())
     s.sort()
     abc=[]
-    k = int(fi.readline())
+    xyz= []
     for i in range(len(s)):
-        abc = abc.append(s[i])
-        if sum(abc) >= k:
+        abc = abc+[s[i]]
+        xyz = sum(abc)
+        if xyz == k:
             break
     print(abc, file=fo)
     fi.close()
     fo.close()
-bt_them()
+#bt_them()
+#bthem fix o nha
+
     
     
         
